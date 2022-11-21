@@ -30,7 +30,7 @@ class Estudiante(models.Model):
     """ Vizualiza los nombres en los registros de estudiantes """
     def __str__(self):
         if self.vigencia: 
-            estado_estudiante = 'VIGENTE'
+            estado_estudiante = 'ACTIVO'
         else: 
             estado_estudiante = 'DE BAJA'
             
@@ -55,4 +55,4 @@ class Matricula(models.Model):
     
     def __str__(self):
         
-        return f'estudiante {self.estudiante.nombre_completo} curso {self.nombre} fecha'
+        return f'estudiante {self.estudiante.nombre_completo()} curso {self.nombre} se registro {self.fecha_matricula}'
