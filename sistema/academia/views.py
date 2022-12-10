@@ -1,5 +1,17 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+
+
+
 # Create your views here.
 def home(request):
-    return HttpResponse('Hola')
+    
+    return render(request,'home.html')
+
+def casa_estudiante(request):
+    return render(request, 'casa_estudiante.html')
+
+
+
+
+
